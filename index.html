@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Roman Shapovalov</title>
-<meta name="description" content="Roman Shapovalov — Tech Lead in Applied AI at Meta (London). Generative models and 3D computer vision.">
+<meta name="description" content="Roman Shapovalov — Applied AI researcher. Generative models and 3D computer vision.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23201d19'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='white' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -28,16 +28,13 @@
 
 <section>
   <h2>About</h2>
-  <p>I lead a team in Applied AI at Meta in London, working on reasoning in
-  large-scale models. Before that, I spent five years as a research engineer in
-  FAIR doing 3D computer vision: reconstructing objects from photos and video,
-  and generating 3D assets from text &mdash; 3D&nbsp;AssetGen, uCO3D, PyTorch3D
-  and friends.</p>
-  <p>I did my PhD at Lomonosov Moscow State University on structured-output
-  learning for 3D vision (advisor: Dmitry&nbsp;Vetrov), back when &ldquo;deep
-  learning&rdquo; still needed scare quotes in some departments.</p>
+  <p>I lead an Applied AI team at Meta in London, working on reasoning in
+  large-scale models. Before that, I spent seven years as a research engineer in
+  FAIR / GenAI doing 3D computer vision: reconstructing objects from photos and videos,
+  and generating 3D assets from text or image prompts.</p>
   <p>These days I'm into generative models (diffusion, flows), neural rendering,
-  and making 3D generation actually useful.</p>
+  and making 3D generation actually useful. More generally, I am motivated by making
+  AI methods useful for products and STEM research.</p>
 </section>
 
 <section>
@@ -46,19 +43,19 @@
   <div class="project">
     <img src="thumbs/assetgen.jpg" alt="3D AssetGen teaser: text-to-3D generations">
     <div>
-      <h3>Text-to-3D that actually looks good</h3>
+      <h3>Fast 3D generation</h3>
       <p><b>Meta 3D AssetGen</b> (NeurIPS 2024): text-to-mesh generation with
-      high-quality geometry, texture and PBR materials. Then <b>AssetGen</b>
-      (2026): the same trick at interactive speed.</p>
+      high-quality geometry, texture, and PBR materials. Then <b>AssetGen</b>
+      (2026): production-grade quality at interactive speed.</p>
       <p class="papers"><a href="https://arxiv.org/abs/2407.02445">3D AssetGen paper</a> &middot;
-      <a href="https://arxiv.org/abs/2605.26137">AssetGen paper</a></p>
+      <a href="https://arxiv.org/abs/2605.26137">AssetGen 2026 paper</a></p>
     </div>
   </div>
 
   <div class="project">
     <img src="thumbs/partgen.jpg" alt="PartGen teaser: part-level 3D generation">
     <div>
-      <h3>Parts, not blobs</h3>
+      <h3>Generation with Parts</h3>
       <p><b>PartGen</b> (CVPR 2025): part-level 3D generation and reconstruction
       with multi-view diffusion models. <b>MeshFlow</b> (CVPR 2026, Highlight):
       efficient artistic mesh generation via MeshVAE and a flow-based diffusion
@@ -71,11 +68,11 @@
   <div class="project">
     <img src="thumbs/uco3d.jpg" alt="CO3D hydrant reconstructions">
     <div>
-      <h3>CO3D &amp; uCO3D</h3>
-      <p>3D learning is starving for data, so we collected it: <b>CO3D</b>
-      (ICCV 2021, oral, best paper honourable mention) and its wilder sibling
+      <h3>Common and Uncommon Objects in 3D</h3>
+      <p>3D learning is starving for real-world data, so we collected it: <b>CO3D</b>
+      (ICCV 2021, oral, best paper honourable mention) and its wilder counterpart
       <b>uCO3D</b> (ICCV 2025) &mdash; large-scale video datasets for learning
-      3D object categories.</p>
+      3D object reconstruction and generation.</p>
       <p class="papers"><a href="https://arxiv.org/abs/2109.00512">CO3D paper</a> &middot;
       <a href="https://arxiv.org/abs/2501.07574">uCO3D paper</a> &middot;
       <a href="https://uco3d.github.io/">project page</a></p>
@@ -99,21 +96,22 @@
   <div class="project">
     <img src="thumbs/replay.jpg" alt="Replay dataset: multi-view capture setup">
     <div>
-      <h3>Replay</h3>
-      <p>68 scenes, up to 4 actors per scene, 9 static + 3 head-mounted cameras,
-      and audio as a first-class citizen &mdash; a dataset for casual holography
-      (ICCV 2023).</p>
-      <p class="papers"><a href="https://arxiv.org/abs/2307.12067">paper</a></p>
+      <h3>Replay Dataset and Deformable Reconstruction</h3>
+      <p>Multi-view videos of normal humans in normal circumstances: up to 4 actors per scene,
+      9 static + 3 head-mounted cameras, and audio as a first-class citizen.
+      Evaluation of non-rigid reconstruction methods (ICCV 2023), spatial audio synthesis (CVPR 2023).</p>
+      <p class="papers"><a href="https://arxiv.org/abs/2307.12067">Replay paper</a>
+      &middot; <a href="https://arxiv.org/abs/2301.08730">Acoustic synthesis paper</a></p>
     </div>
   </div>
 
   <div class="project">
     <img src="thumbs/implicitron.jpg" alt="Implicitron: novel views rendered as 3D Gaussian splats">
     <div>
-      <h3>PyTorch3D and Implicitron</h3>
-      <p>I built core pieces of Meta's library for 3D deep learning &mdash;
+      <h3>PyTorch3D</h3>
+      <p>I contributed to Meta's library for 3D deep learning &mdash;
       differentiable rendering, mesh and point-cloud operators &mdash; and
-      Implicitron, its framework for neural implicit representations and neural
+      designed Implicitron, its framework for neural implicit representations and neural
       rendering. It's the hammer behind half the papers above.</p>
       <p class="papers"><a href="https://github.com/facebookresearch/pytorch3d">PyTorch3D code</a> &middot;
       <a href="https://pytorch3d.org/">docs</a></p>
@@ -123,12 +121,11 @@
 
 <section>
   <h2>Off the clock</h2>
-  <p>Running, tennis, board games, and intellectual games (ChGK). Father of a daughter.</p>
+  <p>Tennis, board games, and intellectual games. Father of a daughter.</p>
 </section>
 
 <footer>
   &copy; Roman Shapovalov &middot; Last updated September 2026<br>
-  <span class="wink">No CAPTCHAs were used to prove I'm not a robot.</span>
 </footer>
 
 </main>
