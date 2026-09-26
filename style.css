@@ -1,0 +1,129 @@
+:root {
+  --ink: #201d19;
+  --muted: #6b6259;
+  --faint: #a39a8d;
+  --link: #1d4ed8;
+  --rule: #e9e2d6;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fdfcfa;
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 2rem;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---- header ---- */
+
+.intro { overflow: hidden; margin-bottom: 2.5rem; }
+
+.photo {
+  float: right;
+  width: 190px;
+  border-radius: 12px;
+  margin: 0 0 1rem 1.75rem;
+  border: 1px solid var(--rule);
+}
+
+h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.2rem;
+}
+
+.role { color: var(--muted); margin: 0 0 1rem; font-weight: 500; }
+
+.links { display: flex; gap: 1.15rem; margin: 0 0 2rem; }
+.links a { color: var(--muted); display: inline-flex; transition: color 0.15s; }
+.links a:hover { color: var(--text); }
+.links svg { width: 21px; height: 21px; display: block; }
+
+/* ---- sections ---- */
+
+section { margin-bottom: 2.5rem; }
+
+h2 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.45rem;
+  margin: 0 0 1.25rem;
+}
+
+/* ---- footer ---- */
+
+/* ---- research projects ---- */
+
+.project {
+  display: flex;
+  gap: 1.35rem;
+  align-items: flex-start;
+  margin-bottom: 1.9rem;
+}
+
+.project img {
+  width: 215px;
+  height: 135px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--rule);
+  background: var(--card);
+  flex-shrink: 0;
+}
+
+.project h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.project p { margin: 0.25rem 0; font-size: 0.95rem; }
+.project .papers { font-size: 0.88rem; color: var(--muted); }
+
+/* ---- footer ---- */
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--faint);
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+.wink { font-style: italic; }
+
+/* ---- small screens ---- */
+
+@media (max-width: 600px) {
+  main { padding-top: 2rem; }
+  .photo {
+    float: none;
+    display: block;
+    width: 170px;
+    margin: 0 0 1.25rem;
+  }
+  h1 { font-size: 1.75rem; }
+  .project { flex-direction: column; gap: 0.8rem; }
+  .project img { width: 100%; height: 170px; }
+}
